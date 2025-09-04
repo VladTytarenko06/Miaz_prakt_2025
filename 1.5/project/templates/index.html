@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бібліотека</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Облік книг у бібліотеці</h1>
+
+        <!-- Форма додавання книги -->
+        <form id="bookForm">
+            <input type="text" id="title" placeholder="Назва книги" required>
+            <input type="text" id="author" placeholder="Автор книги" required>
+            <button type="submit">Додати книгу</button>
+        </form>
+
+        <h2>Список книг</h2>
+        <ul id="booksList"></ul>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
