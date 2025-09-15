@@ -1,0 +1,11 @@
+ID,month,year,three_sentences,THREAT_up,THREAT_down,citizen_impact,PF_score,PF_US,PF_neg
+1,Jan,2025,"Threat is increasing in the north sector.",1,0,0,0,0,0
+2,Jan,2025,"No threat detected in this area.",0,0,0,0,0,0
+3,Jan,2025,"Citizens reported some impact on infrastructure.",0,0,1,0,0,0
+4,Jan,2025,"Power failure reported in southern district.",0,0,0,0,0,0
+5,Jan,2025,"No negative sentiment detected in reports.",0,0,0,0,0,1
+6,Jan,2025,"US related issues are increasing according to data.",1,0,0,0,1,0
+7,Jan,2025,"Threat level down in eastern front.",0,1,0,0,0,0
+8,Jan,2025,"Citizen impact is minimal at this stage.",0,0,1,0,0,0
+9,Jan,2025,"PF score shows moderate risk.",1,0,0,1,0,0
+10,Jan,2025,"Everything seems calm, no events.",0,0,0,0,0,0
