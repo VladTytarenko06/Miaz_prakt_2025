@@ -1,0 +1,11 @@
+﻿ID,month,year,three_sentences,THREAT_up,THREAT_down,citizen_impact,PF_score,PF_US,PF_neg,predicted.values_THREAT_up,predicted.values_THREAT_down,predicted.values_citizen_impact,predicted.values_PF_score,predicted.values_PF_US,predicted.values_PF_neg
+1,1,2025,The army increased presence near the border,1,0,1,1,0,0,,,,,,
+2,1,2025,Local citizens reported calm situation in the city,0,1,0,0,0,1,,,,,,
+3,2,2025,New sanctions against aggressor state announced,1,0,1,1,1,0,,,,,,
+4,2,2025,No military actions observed in the region,0,1,0,0,0,1,,,,,,
+5,3,2025,Troops moved heavy weapons across the frontline,1,0,1,1,1,0,,,,,,
+6,3,2025,Peace negotiations continue without results,0,1,0,0,1,1,,,,,,
+7,4,2025,Air defense systems intercepted enemy drones,1,0,1,1,1,0,0.5,0.5,0.5,0.5,0.5,0.5
+8,4,2025,Farmers resumed work in liberated territories,0,1,0,0,0,1,0.5,0.5,0.5,0.5,0.5,0.5
+9,5,2025,New mobilization wave declared by authorities,1,0,1,1,1,0,0.41584530849722257,0.58492413447835,0.41584530849722257,0.41584530849722257,0.4158453084972229,0.58492413447835
+10,5,2025,Public opinion polls show demand for peace,0,1,0,0,0,1,0.5978213084315448,0.4034939858078192,0.5978213084315448,0.5978213084315448,0.40349398580781887,0.4034939858078192
