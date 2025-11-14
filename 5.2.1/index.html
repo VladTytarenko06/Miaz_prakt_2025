@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Системи ІМ НАТО / ЗСУ — Дашборд</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header class="top-header">
+    <div class="header-left">
+        <div class="tag tag-green">АНАЛІТИЧНИЙ РІВЕНЬ • ІМ</div>
+
+        <h1 class="dashboard-title">Дашборд систем імітаційного моделювання</h1>
+        <p class="unit-info">Порівняння моделей НАТО та Збройних Сил України</p>
+
+        <div class="data-mode">
+            <span>РЕЖИМ ДАНИХ:</span>
+            <b>ОПЕРАТИВНА АНАЛІТИКА</b>
+        </div>
+    </div>
+
+    <div class="header-filters">
+        <div class="filter">
+            <label>Джерело даних</label>
+            <select id="sourceSelect" onchange="renderDashboard()">
+                <option value="NATO">НАТО</option>
+                <option value="UA">ЗСУ</option>
+            </select>
+        </div>
+
+        <div class="filter">
+            <label>Тип моделей</label>
+            <select id="modelType" onchange="renderDashboard()">
+                <option value="strategic">Стратегічні</option>
+                <option value="operational">Оперативні</option>
+                <option value="tactical">Тактичні</option>
+            </select>
+        </div>
+
+        <div class="status-box">
+            <div>АКТУАЛЬНИЙ СТАН</div>
+            <div class="small">АВТООНОВЛЕННЯ КОЖНІ 60 СЕК</div>
+        </div>
+    </div>
+</header>
+
+<!-- Вкладки -->
+<div class="tabs">
+    <button class="tab-btn active" onclick="openTab('tab1', this)">Моделі</button>
+    <button class="tab-btn" onclick="openTab('tab2', this)">Графіки</button>
+    <button class="tab-btn" onclick="openTab('tab3', this)">Порівняння НАТО / ЗСУ</button>
+</div>
+
+<!-- ТАБ 1 — МОДЕЛІ -->
+<div id="tab1" class="tab active-tab">
+    <main class="grid">
+        <!-- Лівий блок -->
+        <section class="panel left-panel">
+            <h2 class="panel-title">Зведені показники</h2>
+            <p class="panel-sub">Залежно від обраного джерела</p>
+
+            <div class="top-metrics">
+                <div class="metric-card">
+                    <div class="metric-title">Кількість моделей</div>
+                    <div id="totalModels" class="metric-main">–</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-title">Інтеграція</div>
+                    <div id="integration" class="metric-main">–%</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-title">Автоматизація</div>
+                    <div id="automation" class="metric-main">–%</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-title">Підготовленість</div>
+                    <div id="training" class="metric-main">–%</div>
+                </div>
+            </div>
+
+            <table class="unit-table">
+                <thead>
+                <tr>
+                    <th>Модель</th>
+                    <th>Тип</th>
+                    <th>Рівень</th>
+                    <th>Статус</th>
+                </tr>
+                </thead>
+                <tbody id="modelTable"></tbody>
+            </table>
+        </section>
+
+        <!-- Правий блок -->
+        <section class="panel right-panel">
+            <h2 class="panel-title">Рівень розвитку моделей</h2>
+            <p class="panel-sub">Стратегічні • Оперативні • Тактичні</p>
+
+            <div id="chartBars"></div>
+        </section>
+    </main>
+</div>
+
+<!-- ТАБ 2 — ГРАФІКИ -->
+<div id="tab2" class="tab">
+    <div class="charts-grid">
+
+        <div class="chart-card">
+            <h3>Динаміка розвитку ІМ</h3>
+            <canvas id="lineChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h3>Порівняння за типами моделей</h3>
+            <canvas id="barChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h3>Радар: НАТО vs ЗСУ</h3>
+            <canvas id="radarChart"></canvas>
+        </div>
+
+    </div>
+</div>
+
+<!-- ТАБ 3 — ПОРІВНЯННЯ НАТО / ЗСУ -->
+<div id="tab3" class="tab">
+    <div class="compare-wrapper">
+
+        <div class="compare-box">
+            <h3>Загальний рівень інтеграції</h3>
+            <div class="compare-bar">
+                <div class="compare-fill nato" style="width:87%">НАТО — 87%</div>
+            </div>
+            <div class="compare-bar">
+                <div class="compare-fill ua" style="width:63%">ЗСУ — 63%</div>
+            </div>
+        </div>
+
+        <div class="compare-box">
+            <h3>Рівень автоматизації</h3>
+            <div class="compare-bar">
+                <div class="compare-fill nato" style="width:72%">НАТО — 72%</div>
+            </div>
+            <div class="compare-bar">
+                <div class="compare-fill ua" style="width:48%">ЗСУ — 48%</div>
+            </div>
+        </div>
+
+        <div class="compare-box">
+            <h3>Підготовленість персоналу</h3>
+            <div class="compare-bar">
+                <div class="compare-fill nato" style="width:74%">НАТО — 74%</div>
+            </div>
+            <div class="compare-bar">
+                <div class="compare-fill ua" style="width:59%">ЗСУ — 59%</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
