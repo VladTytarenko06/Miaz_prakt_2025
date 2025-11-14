@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дашборд бойового чисельного складу</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="top-header">
+    <div class="header-left">
+        <div class="tag tag-green">ОПЕРАТИВНИЙ РІВЕНЬ • БЧС</div>
+
+        <h1 class="dashboard-title">Дашборд бойового чисельного складу</h1>
+        <p class="unit-info">
+            Угруповання військ ОТУ «Південь» • Оперативний день: <b>14.11.2025 06:00</b>
+        </p>
+
+        <div class="data-mode">
+            <span>РЕЖИМ ДАНИХ: </span>
+            <b>УЗАГАЛЬНЕНИЙ, БЕЗ ДЕТАЛІЗАЦІЇ</b>
+        </div>
+    </div>
+
+    <div class="header-filters">
+        <div class="filter">
+            <label>ЕШЕЛОН</label>
+            <select>
+                <option selected>Оперативне командування</option>
+            </select>
+        </div>
+
+        <div class="filter">
+            <label>ПЕРІОД</label>
+            <select>
+                <option selected>Поточний день</option>
+            </select>
+        </div>
+
+        <div class="status-box">
+            <div>СТАНОМ НА 06:00</div>
+            <div class="small">АВТОВІДНОВЛЕННЯ КОЖНІ 60 ХВ</div>
+        </div>
+    </div>
+</header>
+
+
+<main class="grid">
+
+    <!-- Лівий великий блок -->
+    <section class="panel left-panel">
+        <h2 class="panel-title">БОЙОВИЙ СКЛАД — ЗВЕДЕНІ ПОКАЗНИКИ</h2>
+        <p class="panel-sub">Оперативне командування — зведено по бригадах першого ешелону</p>
+
+        <div class="top-metrics">
+
+            <div class="metric-card">
+                <div class="metric-title">ОСОБОВИЙ СКЛАД</div>
+                <div class="metric-main">12 430 / 11 980</div>
+                <div class="metric-sub">96,4% укомплектованості</div>
+                <div class="metric-sub positive">+95 за добу</div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-title">Бойові підрозділи</div>
+                <div class="metric-main">87%</div>
+                <div class="metric-sub">15/18 батальйонів</div>
+                <div class="metric-sub positive">+1 бат.</div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-title">ТЕХНІКА</div>
+                <div class="metric-main">91,2%</div>
+                <div class="metric-sub">Готові до доби: 48 од.</div>
+                <div class="metric-sub negative">-0.6%</div>
+            </div>
+
+            <div class="metric-card small">
+                <div class="metric-title">САНІТАРНІ ВТРАТИ</div>
+                <div class="metric-main">27 / 3</div>
+                <div class="metric-sub">поранені / загиблі</div>
+                <div class="metric-sub negative">-12 осіб</div>
+            </div>
+
+        </div>
+
+        <table class="unit-table">
+            <thead>
+                <tr>
+                    <th>ПІДРОЗДІЛ</th>
+                    <th>ТИП</th>
+                    <th>ШТАТ</th>
+                    <th>НАЯВНІСТЬ</th>
+                    <th>УКОМПЛ.</th>
+                    <th>СТАТУС БОЄЗДАТНОСТІ</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>35 обрбр</td>
+                    <td>Бригада</td>
+                    <td>3400</td>
+                    <td>3260</td>
+                    <td>95,9%</td>
+                    <td><span class="status status-green">Готова до ведення бойових дій</span></td>
+                </tr>
+
+                <tr>
+                    <td>59 омбр</td>
+                    <td>Бригада</td>
+                    <td>3600</td>
+                    <td>3290</td>
+                    <td>91,4%</td>
+                    <td><span class="status status-yellow">Обмежено боєздатна (недоукомпл.)</span></td>
+                </tr>
+
+                <tr>
+                    <td>72 омбр</td>
+                    <td>Бригада</td>
+                    <td>3500</td>
+                    <td>3410</td>
+                    <td>97,4%</td>
+                    <td><span class="status status-green">Готова (резерв командування)</span></td>
+                </tr>
+
+                <tr>
+                    <td>121 тбр</td>
+                    <td>Бригада</td>
+                    <td>1930</td>
+                    <td>1820</td>
+                    <td>94,3%</td>
+                    <td><span class="status status-yellow">Обмежено по техніці</span></td>
+                </tr>
+
+                <tr>
+                    <td>Окремий батальйон БпЛА</td>
+                    <td>Батальйон</td>
+                    <td>620</td>
+                    <td>590</td>
+                    <td>95,2%</td>
+                    <td><span class="status status-red">Часткові втрати ключового персоналу</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+
+
+    <!-- Правий блок -->
+    <section class="panel right-panel">
+        <h2 class="panel-title">СТРУКТУРА БЧС • ПО БРИГАДАХ</h2>
+        <p class="panel-sub">Співвідношення готових, резервних та втрат особового складу</p>
+
+        <div class="bar-block">
+            <div class="bar-row">
+                <div class="bar-label">35 обрбр • 3 260 / 3 400</div>
+                <div class="bar">
+                    <div class="bar-green" style="width: 82%;"></div>
+                    <div class="bar-yellow" style="width: 8%;"></div>
+                    <div class="bar-red" style="width: 10%;"></div>
+                </div>
+                <div class="bar-details">Готові: 2 850 • Резерв: 260 • Втрати: 290</div>
+            </div>
+
+            <div class="bar-row">
+                <div class="bar-label">59 омбр • 3 290 / 3 600</div>
+                <div class="bar">
+                    <div class="bar-green" style="width: 81%;"></div>
+                    <div class="bar-yellow" style="width: 5%;"></div>
+                    <div class="bar-red" style="width: 14%;"></div>
+                </div>
+                <div class="bar-details">Готові: 2 930 • Резерв: 180 • Втрати: 490</div>
+            </div>
+
+            <div class="bar-row">
+                <div class="bar-label">72 омбр • 3 410 / 3 500</div>
+                <div class="bar">
+                    <div class="bar-green" style="width: 87%;"></div>
+                    <div class="bar-yellow" style="width: 6%;"></div>
+                    <div class="bar-red" style="width: 7%;"></div>
+                </div>
+                <div class="bar-details">Готові: 3 050 • Резерв: 300 • Втрати: 150</div>
+            </div>
+
+            <div class="bar-row">
+                <div class="bar-label">121 тбр • 1 820 / 1 930</div>
+                <div class="bar">
+                    <div class="bar-green" style="width: 81%;"></div>
+                    <div class="bar-yellow" style="width: 9%;"></div>
+                    <div class="bar-red" style="width: 10%;"></div>
+                </div>
+                <div class="bar-details">Готові: 1 520 • Резерв: 180 • Втрати: 230</div>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>
+
