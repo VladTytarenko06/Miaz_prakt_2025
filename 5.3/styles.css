@@ -1,0 +1,93 @@
+/* Фон */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #eef0f4;
+    padding: 30px;
+}
+
+/* Заголовок */
+.title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* Контейнер */
+.heatmap-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Таблиця */
+.heatmap {
+    border-collapse: collapse;
+    width: 1000px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Хедер */
+.heatmap thead th {
+    background: #2f3640;
+    color: white;
+    padding: 14px;
+    font-size: 15px;
+    border: 1px solid #444;
+}
+
+/* Ліві назви рядків */
+.heatmap tbody th {
+    background: #2f3640;
+    color: white;
+    padding: 14px;
+    border: 1px solid #444;
+}
+
+/* Клітинки */
+.heatmap td {
+    text-align: center;
+    padding: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    transition: 0.25s;
+    color: white;
+}
+
+/* Hover підсвітка клітинки */
+.heatmap td:hover {
+    transform: scale(1.08);
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+
+/* Hover підсвітка рядка */
+.heatmap tr:hover td {
+    filter: brightness(1.25);
+}
+
+/* Hover підсвітка стовпця */
+.heatmap td:hover,
+.heatmap td:hover ~ td {
+    filter: brightness(1.25);
+}
+
+/* ---- Кольори клітинок ---- */
+.orange  { background: #ffa600; }
+.orange2 { background: #ff7c43; }
+
+.blue    { background: #375a8c; }
+.blue2   { background: #2f4b7c; }
+.darkblue{ background: #003f5c; }
+
+.purple  { background: #665191; }
+.purple2 { background: #a05195; }
+.purple3 { background: #6b4c8a; }
+
+.pink    { background: #d45087; }
+.pink2   { background: #f95d6a; }
+.pink3   { background: #e7695b; }

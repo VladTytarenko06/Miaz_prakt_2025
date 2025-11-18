@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correlation Heatmap</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<h2 class="title">Теплова карта кореляцій</h2>
+
+<div class="heatmap-container">
+    <table class="heatmap">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Інтенсивність атак</th>
+                <th>Погода</th>
+                <th>Відстань до ФЛОТ</th>
+                <th>Час доби</th>
+                <th>Тип озброєння</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th>Інтенсивність атак</th>
+                <td class="orange">1.00</td>
+                <td class="blue">0.10</td>
+                <td class="darkblue">0.05</td>
+                <td class="purple">0.12</td>
+                <td class="blue2">0.08</td>
+            </tr>
+
+            <tr>
+                <th>Погода</th>
+                <td class="blue">0.10</td>
+                <td class="orange">1.00</td>
+                <td class="pink">0.18</td>
+                <td class="purple2">0.15</td>
+                <td class="pink2">0.22</td>
+            </tr>
+
+            <tr>
+                <th>Відстань до ФЛОТ</th>
+                <td class="darkblue">0.05</td>
+                <td class="pink">0.18</td>
+                <td class="orange">1.00</td>
+                <td class="pink3">0.20</td>
+                <td class="purple3">0.12</td>
+            </tr>
+
+            <tr>
+                <th>Час доби</th>
+                <td class="purple">0.12</td>
+                <td class="purple2">0.15</td>
+                <td class="pink3">0.20</td>
+                <td class="orange">1.00</td>
+                <td class="orange2">0.25</td>
+            </tr>
+
+            <tr>
+                <th>Тип озброєння</th>
+                <td class="blue2">0.08</td>
+                <td class="pink2">0.22</td>
+                <td class="purple3">0.12</td>
+                <td class="orange2">0.25</td>
+                <td class="orange">1.00</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
